@@ -21,7 +21,7 @@ reproducibility_week5_project/
 │   ├── clean_books.py  # Step 3: Cleans text & saves to SQLite
 │   └── classify.py     # Step 4: Trains ML model
 ├── Makefile            # Automation tool to run pipeline steps
-├── pyproject.toml      # Project configuration & dependencies
+├── pyproject.toml      # Project configuration & dependencies, not used in this project, you can opt either this or requirements.txt
 ├── requirements.txt    # Pinned dependencies for reproducibility
 └── README.md           # Project documentation
 ```
@@ -97,3 +97,4 @@ We save raw HTML with timestamps (e.g., `mystery-20231025.html`) to prevent over
 
 ### SQLite Database (`data/books.db`)
 The cleaning script migrates data from CSV to a local SQL database. This simulates a production environment where data is queried rather than read from flat files.
+
