@@ -1,4 +1,4 @@
-# Reproducible Book Scraping & Classification Pipeline (Week 5)
+# Reproducible Book Scraping & Classification Pipeline
 
 This project demonstrates a fully reproducible end-to-end data pipeline using Python and Make. It is designed to run in a Linux environment (specifically **WSL** on Windows) to ensure consistent behavior across different machines.
 
@@ -97,4 +97,5 @@ We save raw HTML with timestamps (e.g., `mystery-20231025.html`) to prevent over
 
 ### SQLite Database (`data/books.db`)
 The cleaning script migrates data from CSV to a local SQL database. This simulates a production environment where data is queried rather than read from flat files.
+
 
