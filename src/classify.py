@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
+import joblib
 
 # 1. load data (from CSV or SQLite) ---
 # Option a: CSV
@@ -44,3 +45,9 @@ print(classification_report(y_test, y_pred))
 os.makedirs("logs", exist_ok=True)
 pd.DataFrame([{"accuracy": acc}]).to_csv("logs/metrics.csv", index=False)
 print("Metrics saved to logs/metrics.csv")
+
+# --- 7. save model and vectorizer ---
+os.makedirs("models", exist_ok=True)
+joblib.dump(clf, "models/model.pkl")
+joblib.dump(vec, "models/vectorizer.pkl")
+print("Model and vectorizer saved to models/")

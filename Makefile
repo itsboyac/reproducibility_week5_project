@@ -1,13 +1,17 @@
+"""Note that if you use poetry environment, you should use 'poetry run' before each command to ensure it runs in the correct environment.
+"""
+
 get-data:
-	python src/fetch_data.py
+	poetry run python src/fetch_data.py
 
 scrape:
-	python src/scrape_books.py
+	poetry run python src/scrape_books.py
 
 clean:
-	python src/clean_books.py   # optional cleaning step
+	poetry run python src/clean_books.py   # optional cleaning step
 
 train:
-	python src/classify.py
+	poetry run python src/classify.py
 
 all: get-data scrape clean train
+
